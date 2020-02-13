@@ -18,12 +18,23 @@
 
 weather_data = {
   current: {
-    temperature: 67,
+    temperature: 25,
     conditions: "Sunny"
   },
   forecast: [
-    { temperature: 65, conditions: "Mostly Cloudy" },
+    { temperature: 26, conditions: "Mostly Cloudy" },
     { temperature: 70, conditions: "Partly Cloudy" }
   ]
 }
 
+# My answer
+# puts "Currently is #{weather_data[:current][:temperature]}"
+# weather_data[:current][:conditions] = "sunny" 
+# puts "Currently it is #{weather_data[:current][:temperature]} degrees and #{weather_data[:current][:conditions]}. Tomorrow it will be #{weather_data[:forecast][0][:temperature]} and Mostly Cloudy.
+# The next day it we will see Partly Cloudy skies, with a temperature of 70."
+
+# Professor
+
+puts "Currently it is #{weather_data[:current][:temperature]} degrees and #{weather_data[:current][:conditions].downcase}."
+puts "Tomorrow it will be #{weather_data[:forecast][0][:temperature]} and #{weather_data[:forecast][0][:conditions].downcase}."
+puts "The next day we will see #{weather_data[:forecast][1][:conditions].downcase} skies, with a temperature of #{weather_data[:forecast][1][:temperature]}."
